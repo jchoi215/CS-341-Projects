@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+  <html>
+  
+  <head>
+    <title>JavaScript Example </title>
+  
+    <!-- Adding CSS for display -->
+
+    <style> 
+        body
+        {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          background-color: black;
+          color: white;
+          font-size: 20px;
+          text-align: center;
+        } 
+
+        h1
+        {
+          text-align: center;
+          font-size: 20px;
+          color: white; 
+        }
+
+        h2
+        {
+          text-align: center;
+          font-size: 16px;
+          color: white; 
+        }
+
+        p 
+        {
+          text-align: center;
+          font-size: 12px;
+          color: white;
+        }
+
+      </style>
+  </head> 
+
+  <body>      
+    <h1 style="color: red; font-size: 35px; text-align: center;">
+        <strong> Small JavaScript Example </strong>  
+    </h1>
+
+
+
+
+  <!--   for png images   -->
+
+  <h2> + Using .gifs + </h2>
+    <p>
+      <IMG SRC="serious-cats.gif"; width = 200; height = 150;></IMG>
+      <IMG SRC="omg_cat.gif"; width = 200; height = 150;></IMG>
+      <IMG SRC="jumping_cat.gif"; width = 200; height = 150;></IMG>
+    </p>
+
+
+
+  <!--   for png images   -->
+
+  <h2> + Using .png + </h2>
+    <p>
+      <IMG SRC="Hero1.png";  width = 45; height = 60></IMG>
+      <IMG SRC="Enemy1.png"; width = 85; height = 70;></IMG>
+      <IMG SRC="Enemy2.png"; width = 50; height = 60;></IMG>
+    </p>
+
+
+
+
+  <!--   Music player   -->
+  <!-- Adding Scripts and functionallity -->
+
+    <h2> + Add music + </h2>
+      <button onclick = "playSound()">  PLAY  </button>
+      <button onclick = "stopSound()">  STOP  </button>
+      <input id="volume-slider" type="range" min="0" max="100" step="1" oninput=" 
+      SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+      
+      <audio id = "BGM"><source src = "Talesweaver.wav"></audio>
+
+      <script>
+          var music = {"title": document.getElementById("BGM"), "Volume": 100 }
+          function playSound(){ music.title.play();}
+          function stopSound(){ music.title.pause();}
+          function SetVolume(val){ music.title.volume = val / 100; } 
+      </script>
+
+
+    <h2> + Loose Typing Example + </h2>
+      <script>
+        var looseTyping = {};
+        looseTyping = "This is a string";
+        console.log(looseTyping);
+
+        looseTyping = 123;
+        console.log(looseTyping);
+
+        looseTyping = true;
+        console.log(looseTyping);
+
+        looseTyping = 1.100;
+        console.log(looseTyping);
+      </script>
+
+
+       <h2> + Same Syntax + </h2>
+        <script>
+          for(i = 0; i < 5; i++)
+          {
+           document.write("print test: " + i +"<br>");
+          }
+        </script>
+  </body>
+</html>
